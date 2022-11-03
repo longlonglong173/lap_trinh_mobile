@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    >
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/result"
@@ -15,9 +13,11 @@
         android:layout_marginTop="10dp"
         android:height="100dp"
         android:background="@color/button_gray"
+        android:ellipsize="none"
+        android:gravity="center"
+        android:singleLine="true"
         android:text="0"
         android:textAlignment="textEnd"
-        android:gravity="center"
         android:textColor="@color/primary_text"
         android:textSize="60dp"
         tools:ignore="RtlCompat" />
@@ -25,166 +25,173 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="4"
-        android:layout_marginHorizontal="10dp"
         android:minHeight="90dp"
-        >
+        android:orientation="horizontal"
+        android:weightSum="4">
+
         <Button
             android:id="@+id/CE_button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:layout_margin="4dp"
-            android:text="CE"
-            android:textSize="30sp"
+            android:layout_weight="1"
             android:backgroundTint="@color/button_gray"
+            android:onClick="clearLastChar"
+            android:text="CE"
             android:textColor="@color/primary_text"
-            />
+            android:textSize="30sp" />
+
         <Button
             android:id="@+id/C_button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:layout_margin="4dp"
-            android:text="C"
-            android:textSize="30sp"
+            android:layout_weight="1"
             android:backgroundTint="@color/button_gray"
+            android:onClick="clearAll"
+            android:text="C"
             android:textColor="@color/primary_text"
-            />
+            android:textSize="30sp" />
+
         <Button
             android:id="@+id/BS_button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:layout_margin="4dp"
-            android:text="BS"
-            android:textSize="30sp"
+            android:layout_weight="1"
             android:backgroundTint="@color/button_gray"
+            android:text="BS"
             android:textColor="@color/primary_text"
-            />
+            android:textSize="30sp" />
+
         <Button
             android:id="@+id/division_button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:layout_margin="4dp"
-            android:text="/"
-            android:textSize="40sp"
+            android:layout_weight="1"
             android:backgroundTint="@color/button_gray"
+            android:onClick="handleOperator"
+            android:text="/"
             android:textColor="@color/primary_text"
-            />
+            android:textSize="40sp" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="4"
-        android:layout_marginHorizontal="10dp"
         android:layout_marginTop="-10dp"
         android:minHeight="90dp"
-        >
+        android:orientation="horizontal"
+        android:weightSum="4">
+
         <Button
             android:id="@+id/s7_button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:layout_margin="4dp"
-            android:text="7"
-            android:textSize="40sp"
+            android:layout_weight="1"
             android:backgroundTint="@color/button_white"
+            android:onClick="clickToNumber"
+            android:text="7"
             android:textColor="@color/primary_text"
-            />
+            android:textSize="40sp" />
+
         <Button
             android:id="@+id/s8_button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:layout_margin="4dp"
-            android:text="8"
-            android:textSize="40sp"
+            android:layout_weight="1"
             android:backgroundTint="@color/button_white"
+            android:onClick="clickToNumber"
+            android:text="8"
             android:textColor="@color/primary_text"
-            />
+            android:textSize="40sp" />
+
         <Button
             android:id="@+id/s9_button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:layout_margin="4dp"
-            android:text="9"
-            android:textSize="40sp"
-            android:minHeight="90dp"
+            android:layout_weight="1"
             android:backgroundTint="@color/button_white"
+            android:minHeight="90dp"
+            android:onClick="clickToNumber"
+            android:text="9"
             android:textColor="@color/primary_text"
-            />
+            android:textSize="40sp" />
+
         <Button
             android:id="@+id/multiply_button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:layout_margin="4dp"
-            android:text="X"
-            android:textSize="40sp"
+            android:layout_weight="1"
             android:backgroundTint="@color/button_gray"
+            android:onClick="handleOperator"
+            android:text="X"
             android:textColor="@color/primary_text"
-            />
+            android:textSize="40sp" />
     </LinearLayout>
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="4"
-        android:layout_marginHorizontal="10dp"
         android:layout_marginTop="-10dp"
         android:minHeight="90dp"
-        >
+        android:orientation="horizontal"
+        android:weightSum="4">
+
         <Button
             android:id="@+id/s4_button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:layout_margin="4dp"
-            android:text="4"
-            android:textSize="40sp"
+            android:layout_weight="1"
             android:backgroundTint="@color/button_white"
+            android:onClick="clickToNumber"
+            android:text="4"
             android:textColor="@color/primary_text"
-            />
+            android:textSize="40sp" />
+
         <Button
             android:id="@+id/s5_button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:layout_margin="4dp"
-            android:text="5"
-            android:textSize="40sp"
+            android:layout_weight="1"
             android:backgroundTint="@color/button_white"
+            android:onClick="clickToNumber"
+            android:text="5"
             android:textColor="@color/primary_text"
-            />
+            android:textSize="40sp" />
+
         <Button
             android:id="@+id/s6_button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:layout_margin="4dp"
-            android:text="6"
-            android:textSize="40sp"
+            android:layout_weight="1"
             android:backgroundTint="@color/button_white"
+            android:onClick="clickToNumber"
+            android:text="6"
             android:textColor="@color/primary_text"
-            />
+            android:textSize="40sp" />
+
         <Button
             android:id="@+id/minus_button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:layout_margin="4dp"
-            android:text="-"
-            android:textSize="40sp"
+            android:layout_weight="1"
             android:backgroundTint="@color/button_gray"
+            android:onClick="handleOperator"
+            android:text="-"
             android:textColor="@color/primary_text"
+            android:textSize="40sp"
+
             />
     </LinearLayout>
 
@@ -192,78 +199,78 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="4"
-        android:layout_marginHorizontal="10dp"
         android:layout_marginTop="-10dp"
         android:minHeight="90dp"
-        >
+        android:orientation="horizontal"
+        android:weightSum="4">
+
         <Button
             android:id="@+id/s1_button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:layout_margin="4dp"
-            android:text="1"
-            android:textSize="40sp"
+            android:layout_weight="1"
             android:backgroundTint="@color/button_white"
+            android:onClick="clickToNumber"
+            android:text="1"
             android:textColor="@color/primary_text"
-            />
+            android:textSize="40sp" />
+
         <Button
             android:id="@+id/s2_button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:layout_margin="4dp"
-            android:text="2"
-            android:textSize="40sp"
+            android:layout_weight="1"
             android:backgroundTint="@color/button_white"
+            android:onClick="clickToNumber"
+            android:text="2"
             android:textColor="@color/primary_text"
-            />
+            android:textSize="40sp" />
+
         <Button
             android:id="@+id/s3_button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:layout_margin="4dp"
-            android:text="3"
-            android:textSize="40sp"
+            android:layout_weight="1"
             android:backgroundTint="@color/button_white"
+            android:onClick="clickToNumber"
+            android:text="3"
             android:textColor="@color/primary_text"
-            />
+            android:textSize="40sp" />
+
         <Button
             android:id="@+id/plus_button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:layout_margin="4dp"
-            android:text="+"
-            android:textSize="40sp"
+            android:layout_weight="1"
             android:backgroundTint="@color/button_gray"
+            android:onClick="handleOperator"
+            android:text="+"
             android:textColor="@color/primary_text"
-            />
+            android:textSize="40sp" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="4"
-        android:layout_marginHorizontal="10dp"
         android:layout_marginTop="-10dp"
         android:minHeight="90dp"
-        >
+        android:orientation="horizontal"
+        android:weightSum="4">
+
         <Button
             android:id="@+id/mix_button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:layout_margin="4dp"
-            android:text="+/-"
-            android:textSize="25sp"
+            android:layout_weight="1"
             android:backgroundTint="@color/button_gray"
+            android:text="+/-"
             android:textColor="@color/primary_text"
-            />
+            android:textSize="25sp" />
 
         <Button
             android:id="@+id/s0_button"
@@ -272,6 +279,7 @@
             android:layout_margin="4dp"
             android:layout_weight="1"
             android:backgroundTint="@color/button_white"
+            android:onClick="clickToNumber"
             android:text="0"
             android:textColor="@color/primary_text"
             android:textSize="40sp" />
@@ -280,23 +288,28 @@
             android:id="@+id/point_button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:layout_margin="4dp"
-            android:text="."
-            android:textSize="40sp"
+            android:layout_weight="1"
             android:backgroundTint="@color/button_gray"
+            android:onClick="handleOperator"
+            android:text="."
             android:textColor="@color/primary_text"
+            android:textSize="40sp"
+
             />
+
         <Button
             android:id="@+id/equal_button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:layout_margin="4dp"
-            android:text="="
-            android:textSize="40sp"
+            android:layout_weight="1"
             android:backgroundTint="@color/button_gray"
+            android:onClick="handleOperator"
+            android:text="="
             android:textColor="@color/primary_text"
+            android:textSize="40sp"
+
             />
     </LinearLayout>
 </LinearLayout>
