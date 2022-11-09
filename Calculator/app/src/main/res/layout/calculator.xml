@@ -27,7 +27,8 @@
         android:layout_height="wrap_content"
         android:minHeight="90dp"
         android:orientation="horizontal"
-        android:weightSum="4">
+        android:weightSum="4"
+        >
 
         <Button
             android:id="@+id/CE_button"
