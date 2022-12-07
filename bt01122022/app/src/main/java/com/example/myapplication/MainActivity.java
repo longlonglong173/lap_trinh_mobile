@@ -15,7 +15,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     int errorColor = Color.parseColor("#FF0000");
-    int transparentColor = Color.parseColor("#FF0000");
+    int transparentColor = Color.parseColor("#00FFFFFF");
     int textColor = Color.parseColor("#FF000000");
     EditText firstName, lastName, address, email;
     RadioGroup gender;
